@@ -1,0 +1,197 @@
+.searchPage {
+  background-color: var(--color-background-base);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 24px 60px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0 36px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.searchBarContainer {
+  display: flex;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 32px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px 6px 20px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-speed) ease;
+}
+
+.searchBarContainer:focus-within {
+  border-color: var(--color-pink-primary);
+  box-shadow: 0 0 0 4px var(--color-pink-glow);
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px 4px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-title);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchButton {
+  padding: 11px 26px;
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-rose);
+  transition: all var(--transition-speed) ease;
+}
+
+.searchButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.filtersContainer {
+  margin-bottom: 30px;
+}
+
+.filtersContainer > div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resultsTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+}
+
+.resultsCount {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.errorMessage {
+  padding: 16px 20px;
+  background-color: var(--color-danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-danger-text);
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding: 20px 0;
+}
+
+.paginationButton {
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 9px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-speed) ease;
+}
+
+.paginationButton:disabled {
+  background-color: var(--color-background-subtle);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.paginationButton:hover:not(:disabled) {
+  border-color: var(--color-pink-primary);
+  color: var(--color-pink-secondary);
+  background-color: var(--color-pink-light);
+  transform: translateY(-1px);
+}
+
+.pageIndicator {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+  padding: 0 8px;
+}
+
+@media (max-width: 640px) {
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+
+  .searchBarContainer {
+    border-radius: var(--radius-lg);
+  }
+
+  .searchButton {
+    border-radius: var(--radius-md);
+  }
+}

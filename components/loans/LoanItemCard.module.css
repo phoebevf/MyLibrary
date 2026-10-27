@@ -1,0 +1,138 @@
+.loanItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 18px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-speed) ease;
+  background-color: var(--color-background-accent);
+  font-family: var(--font-sans);
+  gap: 12px;
+  box-shadow: var(--shadow-xs);
+}
+
+@media (min-width: 600px) {
+  .loanItem {
+    grid-template-columns: 2fr 1.5fr 1fr;
+    align-items: center;
+  }
+}
+
+.itemOverdue {
+  border-left: 4px solid var(--color-danger);
+  background-color: color-mix(in srgb, var(--color-danger) 4%, var(--color-background-accent));
+}
+
+.loanItem:hover {
+  border-color: var(--color-pink-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.loanItemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookTitle {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-text-title);
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.bookAuthor {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.loanItemDates {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (min-width: 600px) {
+  .loanItemDates {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.dateInfo {
+  display: flex;
+  gap: 6px;
+  font-size: 0.88rem;
+}
+
+.dateLabel {
+  font-weight: 500;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.dateValue {
+  font-weight: 600;
+  color: var(--color-text-title);
+}
+
+.loanItemStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media (max-width: 599px) {
+  .loanItemStatus {
+    align-items: flex-start;
+  }
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.statusActive {
+  background-color: var(--color-pink-light);
+  color: var(--color-pink-secondary);
+  border: 1px solid rgba(var(--color-pink-primary-rgb), 0.3);
+}
+
+.statusReturned {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.statusOverdue {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.overdueWarning {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-danger);
+  margin-top: 4px;
+}
+
+.statusRejected {
+  background-color: var(--color-background-subtle);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}

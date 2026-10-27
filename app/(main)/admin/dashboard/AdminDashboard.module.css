@@ -1,0 +1,282 @@
+.dashboard {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+  background-color: var(--color-background-base);
+}
+
+.statusContainer {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--color-text-title);
+}
+
+.errorMessage {
+  font-family: var(--font-sans);
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* --- Page Title --- */
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+  letter-spacing: -0.02em;
+}
+
+/* --- Metrics Grid --- */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.metricCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-speed) ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-pink-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.metricIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.metric-pink .metricIcon { background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary)); }
+.metric-blue .metricIcon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.metric-red .metricIcon { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+.metric-yellow .metricIcon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+.metricInfo {
+  text-align: left;
+}
+
+.metricTitle {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metricValue {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin: 4px 0 0;
+  line-height: 1;
+}
+
+/* --- Loan Management Sections --- */
+.loanSection {
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.emptyList {
+  padding: 48px 20px;
+  text-align: center;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Loan Table --- */
+.loanTableContainer {
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-xs);
+}
+
+.loanTable {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.loanTable th,
+.loanTable td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.loanTable th {
+  background-color: var(--color-background-subtle);
+  color: var(--color-text-title);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.loanTable tr:hover td {
+  background-color: color-mix(in srgb, var(--color-pink-primary) 3%, var(--color-background-accent));
+}
+
+.overdueRow td {
+  background-color: color-mix(in srgb, var(--color-danger) 6%, var(--color-background-accent)) !important;
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+/* --- Status and Actions --- */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.pendingActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.durationInput {
+  width: 64px;
+  padding: 6px 8px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.durationInput:focus {
+  outline: none;
+  border-color: var(--color-pink-primary);
+}
+
+.actionApprove,
+.actionReturn,
+.actionReject {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.actionApprove {
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  box-shadow: 0 2px 8px var(--color-pink-glow);
+}
+
+.actionApprove:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.actionReturn {
+  background-color: var(--color-success);
+}
+
+.actionReturn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.actionReject {
+  background-color: var(--color-danger);
+}
+
+.actionReject:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loanTable th:nth-child(1), .loanTable td:nth-child(1) { width: 15%; min-width: 100px; }
+.loanTable th:nth-child(2), .loanTable td:nth-child(2) { width: 25%; min-width: 180px; }
+.loanTable th:nth-child(3), .loanTable td:nth-child(3) { width: 20%; min-width: 140px; }
+.loanTable th:nth-child(4), .loanTable td:nth-child(4) { width: 15%; min-width: 100px; }
+.loanTable th:nth-child(5), .loanTable td:nth-child(5) { width: 25%; min-width: 200px; }
+
+.requesterUsername {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  font-weight: 600;
+}
+
+.requesterEmail {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  font-size: 0.82em;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,99 @@
+.searchForm {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-sm);
+  padding: 4px 6px 4px 16px;
+  transition: all var(--transition-speed) ease;
+}
+
+.inputContainer:focus-within {
+  border-color: var(--color-pink-primary);
+  box-shadow: 0 0 0 4px var(--color-pink-glow);
+}
+
+.iconContainer {
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.searchIcon {
+  color: var(--color-text-muted);
+  width: 18px;
+  height: 18px;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-title);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.clearButton {
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.clearButton:hover {
+  background-color: var(--color-background-subtle);
+  color: var(--color-text-title);
+}
+
+.submitButton {
+  padding: 9px 20px;
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-rose);
+  transition: all var(--transition-speed) ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}

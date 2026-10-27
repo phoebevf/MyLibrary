@@ -1,0 +1,145 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 56px 24px;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  margin: 32px auto;
+  max-width: 520px;
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-xs);
+}
+
+.emptyIcon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.emptyTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 8px;
+}
+
+.emptyDescription {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeletonBase {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    var(--color-background-accent) 0%,
+    var(--color-background-subtle) 50%,
+    var(--color-background-accent) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite ease-in-out;
+}
+
+.skeletonGrid {
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 65%;
+  background-color: var(--color-background-subtle);
+}
+
+.skeletonContent {
+  padding: 14px;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeletonList {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  height: 124px;
+}
+
+.skeletonListImage {
+  width: 68px;
+  height: 92px;
+  flex-shrink: 0;
+  background-color: var(--color-background-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.skeletonContentList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skeletonLine {
+  height: 12px;
+  background-color: var(--color-background-subtle);
+  border-radius: var(--radius-xs);
+}
+
+.lineShort { width: 35%; }
+.lineMedium { width: 60%; }
+.lineLarge { width: 85%; }
+
+.skeletonTags {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.skeletonTag {
+  height: 16px;
+  background-color: var(--color-background-subtle);
+  border-radius: var(--radius-full);
+}
+
+.tagSmall { width: 44px; }
+.tagMedium { width: 56px; }
+.tagLarge { width: 72px; }
+.tagExtraSmall { width: 32px; }

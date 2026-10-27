@@ -1,0 +1,287 @@
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--color-pink-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+/* ==========================================================================
+   GRID CARD VARIANT
+   ========================================================================== */
+.bookCardGrid {
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardLink:hover .bookCardGrid {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--color-pink-primary);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 135%;
+  background-color: var(--color-background-subtle);
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+.cardLink:hover .coverImage {
+  transform: scale(1.04);
+}
+
+.placeholderContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-background-subtle);
+}
+
+.placeholderIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.placeholderText {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.infoContent {
+  padding: 14px 14px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleGrid {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+  margin: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.35;
+}
+
+.authorGrid {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.metadataContainer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+}
+
+.metadataRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.popularityContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.favoriteIcon {
+  color: var(--color-pink-primary);
+  fill: var(--color-pink-primary);
+  width: 15px;
+  height: 15px;
+}
+
+.metadataCount {
+  font-weight: 600;
+}
+
+.metadataDate {
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   STATUS BADGES
+   ========================================================================== */
+.availabilityBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+  margin-bottom: 6px;
+}
+
+.badgeAvailable {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badgeBorrowed {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badgeReserved {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* ==========================================================================
+   LIST CARD VARIANT
+   ========================================================================== */
+.bookCardList {
+  background-color: var(--color-background-accent);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: all var(--transition-speed) ease;
+  box-shadow: var(--shadow-xs);
+}
+
+.cardLink:hover .bookCardList {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-pink-primary);
+  transform: translateY(-2px);
+}
+
+.listFlexContainer {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.listImageWrapper {
+  position: relative;
+  width: 68px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-background-subtle);
+  border: 1px solid var(--color-border);
+}
+
+.listPlaceholderIcon {
+  font-size: 1.5rem;
+}
+
+.listContent {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.listTitleAuthor {
+  min-width: 0;
+}
+
+.titleList {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--color-text-title);
+  line-height: 1.3;
+}
+
+.authorList {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-pink-secondary);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.metadataList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 10px;
+}
+
+.favoriteStatusList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .bookCardList {
+    padding: 12px;
+  }
+
+  .listFlexContainer {
+    gap: 12px;
+  }
+
+  .listImageWrapper {
+    width: 54px;
+    height: 80px;
+  }
+
+  .titleList {
+    font-size: 0.98rem;
+  }
+}

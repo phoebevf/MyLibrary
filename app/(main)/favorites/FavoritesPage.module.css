@@ -1,0 +1,143 @@
+.favoritesPage {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+  background-color: var(--color-background-base);
+}
+
+.statusContainer {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--color-text-title);
+}
+
+.errorMessage {
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  display: inline-block;
+  font-family: var(--font-sans);
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.02em;
+}
+
+.pageDescription {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.listGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 24px;
+  background-color: var(--color-background-accent);
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-top: 32px;
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-xs);
+}
+
+.emptyState p {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emptyIcon {
+  color: var(--color-pink-primary);
+  margin-bottom: 16px;
+}
+
+.browseButton {
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 12px 28px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-rose);
+  transition: all var(--transition-speed) ease;
+}
+
+.browseButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.favoriteItem {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+}
+
+.favoriteItem:hover {
+  border-color: var(--color-pink-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.bookCardWrapper {
+  flex-grow: 1;
+}
+
+.removeAction {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background-subtle);
+}
+
+.removeButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.removeButton:hover {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger);
+}

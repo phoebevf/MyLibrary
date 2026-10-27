@@ -1,0 +1,251 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* ==========================================================================
+     COLOR SYSTEM (Refined Signature Pink / Coral / Cream)
+     ========================================================================== */
+  --color-pink-primary: #f497aa;       /* Elegant Rose Pink */
+  --color-pink-primary-rgb: 244, 151, 170;
+  --color-pink-secondary: #e27386;     /* Rose Coral */
+  --color-pink-light: #fff0f3;         /* Blush Tint */
+  --color-pink-glow: rgba(244, 151, 170, 0.25);
+
+  /* Semantic Color Aliases */
+  --color-primary: var(--color-pink-primary);
+  --color-secondary: var(--color-pink-secondary);
+  --color-accent: #ffffff;
+
+  /* Surfaces & Backgrounds */
+  --color-background-base: #faf6f5;    /* Warm, editorial cream */
+  --color-background-accent: #ffffff;  /* Pure white cards/panels */
+  --color-background: var(--color-background-accent);
+  --color-background-subtle: #f5edeb;
+
+  /* Text & Content */
+  --color-text-title: #1c1518;        /* Obsidian Charcoal */
+  --color-text-primary: #1c1518;
+  --color-text-base: #5a5054;         /* Neutral warm slate */
+  --color-text-muted: #8c8085;
+  --color-text-on-primary: #ffffff;
+
+  /* Borders & Dividers */
+  --color-border: #ede4e4;
+  --color-border-hover: #dfd2d4;
+
+  /* Feedback Colors */
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #065f46;
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #92400e;
+  --color-danger: #ef4444;
+  --color-danger-bg: #fef2f2;
+  --color-danger-text: #991b1b;
+
+  /* ==========================================================================
+     TYPOGRAPHY SYSTEM
+     ========================================================================== */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  --font-title: var(--font-serif);
+  --font-text: var(--font-sans);
+  --font-cursive: var(--font-serif);   /* Replaced cursive with elegant editorial serif */
+
+  /* ==========================================================================
+     LAYOUT, RADII & ELEVATIONS
+     ========================================================================== */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 8px rgba(35, 20, 25, 0.05);
+  --shadow-md: 0 8px 20px rgba(35, 20, 25, 0.07);
+  --shadow-lg: 0 16px 36px rgba(35, 20, 25, 0.1);
+  --shadow-rose: 0 8px 24px var(--color-pink-glow);
+
+  --sidebar-width-open: 260px;
+  --transition-speed: 0.25s;
+}
+
+/* ==========================================================================
+   DARK THEME
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-pink-primary: #ff85a1;
+    --color-pink-primary-rgb: 255, 133, 161;
+    --color-pink-secondary: #fca5b7;
+    --color-pink-light: #2b1a21;
+    --color-pink-glow: rgba(255, 133, 161, 0.2);
+
+    --color-primary: var(--color-pink-primary);
+    --color-secondary: var(--color-pink-secondary);
+    --color-accent: #1e191d;
+
+    --color-background-base: #131012;
+    --color-background-accent: #1e191d;
+    --color-background: var(--color-background-accent);
+    --color-background-subtle: #272126;
+
+    --color-text-title: #fcf7f9;
+    --color-text-primary: #fcf7f9;
+    --color-text-base: #c2b6bb;
+    --color-text-muted: #8e8086;
+    --color-text-on-primary: #131012;
+
+    --color-border: #332930;
+    --color-border-hover: #483944;
+
+    --color-success-bg: rgba(16, 185, 129, 0.15);
+    --color-success-text: #6ee7b7;
+    --color-warning-bg: rgba(245, 158, 11, 0.15);
+    --color-warning-text: #fcd34d;
+    --color-danger-bg: rgba(239, 68, 68, 0.15);
+    --color-danger-text: #fca5a5;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.55);
+    --shadow-rose: 0 8px 24px var(--color-pink-glow);
+  }
+}
+
+[data-theme="dark"] {
+  --color-pink-primary: #ff85a1;
+  --color-pink-primary-rgb: 255, 133, 161;
+  --color-pink-secondary: #fca5b7;
+  --color-pink-light: #2b1a21;
+  --color-pink-glow: rgba(255, 133, 161, 0.2);
+
+  --color-primary: var(--color-pink-primary);
+  --color-secondary: var(--color-pink-secondary);
+  --color-accent: #1e191d;
+
+  --color-background-base: #131012;
+  --color-background-accent: #1e191d;
+  --color-background: var(--color-background-accent);
+  --color-background-subtle: #272126;
+
+  --color-text-title: #fcf7f9;
+  --color-text-primary: #fcf7f9;
+  --color-text-base: #c2b6bb;
+  --color-text-muted: #8e8086;
+  --color-text-on-primary: #131012;
+
+  --color-border: #332930;
+  --color-border-hover: #483944;
+
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-success-text: #6ee7b7;
+  --color-warning-bg: rgba(245, 158, 11, 0.15);
+  --color-warning-text: #fcd34d;
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+  --color-danger-text: #fca5a5;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.55);
+  --shadow-rose: 0 8px 24px var(--color-pink-glow);
+}
+
+[data-theme="light"] {
+  --color-pink-primary: #f497aa;
+  --color-pink-primary-rgb: 244, 151, 170;
+  --color-pink-secondary: #e27386;
+  --color-pink-light: #fff0f3;
+  --color-pink-glow: rgba(244, 151, 170, 0.25);
+
+  --color-primary: var(--color-pink-primary);
+  --color-secondary: var(--color-pink-secondary);
+  --color-accent: #ffffff;
+
+  --color-background-base: #faf6f5;
+  --color-background-accent: #ffffff;
+  --color-background: var(--color-background-accent);
+  --color-background-subtle: #f5edeb;
+
+  --color-text-title: #1c1518;
+  --color-text-primary: #1c1518;
+  --color-text-base: #5a5054;
+  --color-text-muted: #8c8085;
+  --color-text-on-primary: #ffffff;
+
+  --color-border: #ede4e4;
+  --color-border-hover: #dfd2d4;
+
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #065f46;
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #92400e;
+  --color-danger-bg: #fef2f2;
+  --color-danger-text: #991b1b;
+}
+
+/* ==========================================================================
+   BASE ELEMENT STYLES
+   ========================================================================== */
+body {
+  background-color: var(--color-background-base);
+  color: var(--color-text-base);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-title);
+  font-family: var(--font-title);
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}

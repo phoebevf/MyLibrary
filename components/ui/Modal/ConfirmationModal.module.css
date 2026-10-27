@@ -1,0 +1,134 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 14, 16, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modalContent {
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 32px 28px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: modalEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modalTitle {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 12px;
+  letter-spacing: -0.015em;
+}
+
+.modalMessage {
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-base);
+  line-height: 1.55;
+}
+
+.customContentArea {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cancelButton,
+.confirmButton {
+  padding: 11px 18px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.cancelButton {
+  flex: 1;
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border: 1.5px solid var(--color-border);
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: var(--color-background-subtle);
+  border-color: var(--color-border-hover);
+}
+
+.confirmButton {
+  flex: 2;
+  background-color: var(--color-danger);
+  color: #ffffff;
+  border: 1.5px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.25);
+}
+
+.confirmButton:hover:not(.disabled):not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.disabled,
+.confirmButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.countdown {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,160 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--sidebar-width-open);
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border-right: 1px solid var(--color-border);
+  z-index: 1000;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-x: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 270px;
+  }
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4px 16px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.closeButton {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  color: var(--color-text-base);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed) ease;
+}
+
+.closeButton:hover {
+  background-color: var(--color-background-subtle);
+  color: var(--color-pink-primary);
+  border-color: var(--color-border);
+}
+
+.navLinks {
+  flex-grow: 1;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.navLink,
+.adminLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--color-text-title);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.navLink:hover,
+.adminLink:hover {
+  color: var(--color-pink-secondary);
+  background-color: var(--color-pink-light);
+  transform: translateX(3px);
+}
+
+.navIcon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.adminLink {
+  border-left: 3px solid var(--color-pink-primary);
+}
+
+/* --- Footer: User/Auth Status --- */
+.sidebarFooter {
+  border-top: 1px solid var(--color-border);
+  padding: 14px 4px 4px;
+  flex-shrink: 0;
+}
+
+.authInfo,
+.loginLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: var(--color-text-title);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-speed) ease;
+}
+
+.authInfo:hover,
+.loginLink:hover {
+  background-color: var(--color-background-subtle);
+}
+
+.profileIcon {
+  color: var(--color-pink-primary);
+  flex-shrink: 0;
+}
+
+.profileUsername,
+.loginText {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.logoutButton {
+  margin-top: 8px;
+  width: 100%;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-danger);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.logoutButton:hover {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger);
+}

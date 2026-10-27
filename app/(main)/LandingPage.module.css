@@ -1,0 +1,172 @@
+.landingPage {
+  background-color: var(--color-background-base);
+  min-height: 100vh;
+}
+
+.heroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 100px;
+  background: radial-gradient(
+    ellipse at 50% 25%,
+    color-mix(in srgb, var(--color-pink-primary) 14%, var(--color-background-accent)) 0%,
+    var(--color-background-accent) 70%
+  );
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 740px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitleCursive {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-pink-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.heroTitleMain {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin: 0 0 20px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.heroDescription {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  color: var(--color-text-base);
+  margin: 0 auto 36px;
+  line-height: 1.65;
+  max-width: 600px;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaButtonPrimary,
+.ctaButtonSecondary {
+  padding: 13px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed) ease;
+}
+
+.ctaButtonPrimary {
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-rose);
+}
+
+.ctaButtonPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px var(--color-pink-glow);
+  filter: brightness(1.05);
+}
+
+.ctaButtonSecondary {
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
+}
+
+.ctaButtonSecondary:hover {
+  border-color: var(--color-pink-primary);
+  color: var(--color-pink-secondary);
+  background-color: var(--color-pink-light);
+  transform: translateY(-2px);
+}
+
+.recommendationSection {
+  padding: 70px 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.015em;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-pink-primary);
+  border-radius: var(--radius-full);
+  margin: 12px auto 0;
+}
+
+.statusMessage {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  padding: 40px 0;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 28px;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 60px 20px 70px;
+  }
+
+  .heroTitleMain {
+    font-size: 2.5rem;
+  }
+
+  .heroTitleCursive {
+    font-size: 1.25rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .bookGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 18px;
+  }
+}

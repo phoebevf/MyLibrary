@@ -1,0 +1,150 @@
+.historyPage {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.02em;
+}
+
+.pageDescription {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.statusContainer {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-xs);
+}
+
+.selectInput,
+.dateInput {
+  padding: 8px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background-accent);
+  color: var(--color-text-title);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.selectInput:focus,
+.dateInput:focus {
+  outline: none;
+  border-color: var(--color-pink-primary);
+  box-shadow: 0 0 0 3px var(--color-pink-glow);
+}
+
+.customDateRange {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterButton {
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-pink-secondary));
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 9px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--shadow-rose);
+  transition: all var(--transition-speed) ease;
+}
+
+.filterButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.loanTableContainer {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-accent);
+  box-shadow: var(--shadow-xs);
+}
+
+.loanTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loanTable th,
+.loanTable td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+}
+
+.loanTable th {
+  background-color: var(--color-background-subtle);
+  color: var(--color-text-title);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.loanTable tr:hover td {
+  background-color: color-mix(in srgb, var(--color-pink-primary) 3%, var(--color-background-accent));
+}
+
+.historyStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.rejectedRow td {
+  opacity: 0.75;
+  background-color: color-mix(in srgb, var(--color-danger) 5%, var(--color-background-accent)) !important;
+}
+
+.emptyList {
+  padding: 48px 20px;
+  text-align: center;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  margin-top: 24px;
+  background-color: var(--color-background-accent);
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+}
